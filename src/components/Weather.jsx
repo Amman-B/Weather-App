@@ -3,7 +3,7 @@ import logo from '../images/bg.jpg';
 import Form from "./Form";
 const useStyles = makeStyles({
     component: {
-        height: 'auto',
+        height: '80vh',
         width: '100%',
         marginTop: 10,
         marginLeft: 2
