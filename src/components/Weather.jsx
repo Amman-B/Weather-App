@@ -1,6 +1,7 @@
 import { Box, makeStyles } from "@material-ui/core";
 import logo from '../images/bg.jpg';
 import Form from "./Form";
+
 const useStyles = makeStyles({
     component: {
         height: '100vh',

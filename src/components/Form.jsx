@@ -64,8 +64,8 @@ const Form = () => {
           label="City"
           InputLabelProps={{
             classes: { root: classes.labelRoot },
-          }}
-        />
+                  }} />
+              
         <TextField
           InputProps={{ className: classes.input }}
           onChange={(e) => handleCountryChange(e.target.value)}
@@ -73,16 +73,16 @@ const Form = () => {
           label="Country"
           InputLabelProps={{
             classes: { root: classes.labelRoot },
-          }}
-        />
+                  }} />
+              
         <Button
           variant="contained"
           onClick={() => handleClick(true)}
-          className={classes.button}
-        >
+          className={classes.button}>
           Get Weather
         </Button>
-      </Box>
+          </Box>
+          
       <Information data={data} city={city} country={country} />
     </>
   );

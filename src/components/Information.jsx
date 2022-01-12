@@ -56,6 +56,7 @@ const Information = ({ data, city, country }) => {
           {data.name}, {data.sys.country}{" "}
         </Box>
       </Typography>
+
       <Typography className={classes.row}>
         <SettingsBrightnessIcon className={classes.icon} />
         Temperature:{" "}
@@ -63,6 +64,7 @@ const Information = ({ data, city, country }) => {
           {data.main.temp}°C{" "}
         </Box>
       </Typography>
+
       <Typography className={classes.row}>
         <OpacityIcon className={classes.icon} />
         Humidity:{" "}
@@ -70,6 +72,7 @@ const Information = ({ data, city, country }) => {
           {data.main.humidity}%{" "}
         </Box>
       </Typography>
+
       <Typography className={classes.row}>
         <Brightness5Icon className={classes.icon} />
         Sun Rise:{" "}
@@ -77,6 +80,7 @@ const Information = ({ data, city, country }) => {
           {new Date(data.sys.sunrise * 1000).toLocaleTimeString()}{" "}
         </Box>
       </Typography>
+
       <Typography className={classes.row}>
         <Brightness6Icon className={classes.icon} />
         Sun Set:{" "}
@@ -84,6 +88,7 @@ const Information = ({ data, city, country }) => {
           {new Date(data.sys.sunset * 1000).toLocaleTimeString()}{" "}
         </Box>
       </Typography>
+
       <Typography className={classes.row}>
         <DehazeIcon className={classes.icon} />
         Condition:{" "}
@@ -91,6 +96,7 @@ const Information = ({ data, city, country }) => {
           {data.weather[0].main}{" "}
         </Box>
       </Typography>
+
       <Typography className={classes.row}>
         <CloudIcon className={classes.icon} />
         Clouds:{" "}
