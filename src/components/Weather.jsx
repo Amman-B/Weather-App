@@ -1,25 +1,23 @@
-import { Box, makeStyles } from "@material-ui/core";
+import { Box, makeStyles, Container, Grid } from "@material-ui/core";
 import logo from '../images/bg.jpg';
 import Form from "./Form";
 const useStyles = makeStyles({
     component: {
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        width: '65%',
-        margin: '0 auto'
+        height: 'auto',
+        width: '100%',
+        marginTop: 10,
+        marginLeft: 2
     },
     leftContainer: {
         backgroundImage: `URL(${logo})`,
-        height: '80%',
-        width: '30%',
+        height: 'auto',
         backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         borderRadius: '20px 0px 0px 20px'
     },
     rightContainer: {
         background: 'linear-gradient(to right, #e74c3c, #e67e22)',
-        height: '80%',
-        width: '70%'
+        height: 'auto',
     }
 })
 
@@ -27,12 +25,14 @@ const useStyles = makeStyles({
 const Weather = () => {
     const classes = useStyles();
     return (
-      <Box className={classes.component}>
-        <Box className={classes.leftContainer}></Box>
-            <Box className={classes.rightContainer}>
+      <Container maxWidth="lg">
+            <Grid container spacing={2} className={classes.component}>
+                <Grid item xs={4 } lg={ 4} className={classes.leftContainer}></Grid>
+          <Grid item xs={8 } lg={8 } className={classes.rightContainer}>
             <Form />
-            </Box>
-      </Box>
+          </Grid>
+        </Grid>
+      </Container>
     );
 }
 
