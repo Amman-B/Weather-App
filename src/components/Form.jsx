@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     background: "#c2a5a4",
   },
   input: {
-    color: "#fff",
+    color: "black",
     marginRight: 15,
   },
   labelRoot: {
