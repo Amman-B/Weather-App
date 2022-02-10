@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   component: {
     padding: 10,
     display: "flex",
-    background: "#445A6F",
+    background: "#c2a5a4",
   },
   input: {
     color: "#fff",
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
   labelRoot: {
     fontSize: 15,
-    color: "#fff",
+    color: "black",
   },
   button: {
     background: "#e67e22",
@@ -23,6 +23,9 @@ const useStyles = makeStyles({
     width: 150,
     height: 40,
     marginTop: 5,
+    "&:hover": {
+      background: "#3E3736",
+    },
   },
 });
 
@@ -33,6 +36,9 @@ const Form = () => {
   const [click, handleClick] = useState(false);
   const [data, setData] = useState();
 
+
+  /* Asynchronous call with a promise to return data. 
+  Function will wait for data to return, then set the data */
   useEffect(() => {
     const weatherInfo = async () => {
       city &&
@@ -57,6 +63,8 @@ const Form = () => {
   return (
     <>
       <Box className={classes.component}>
+
+        {/* City textfield */}
         <TextField
           InputProps={{ className: classes.input }}
           onChange={(e) => handleCityChange(e.target.value)}
@@ -66,6 +74,8 @@ const Form = () => {
             classes: { root: classes.labelRoot },
           }}
         />
+
+        {/* Country textfield */}
         <TextField
           InputProps={{ className: classes.input }}
           onChange={(e) => handleCountryChange(e.target.value)}
@@ -75,6 +85,8 @@ const Form = () => {
             classes: { root: classes.labelRoot },
           }}
         />
+
+        {/* Get Weather button */}
         <Button
           variant="contained"
           onClick={() => handleClick(true)}

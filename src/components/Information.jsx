@@ -49,6 +49,7 @@ const Information = ({ data, city, country }) => {
 
   return data && city && country ? (
     <Box className={classes.component}>
+      {/* Location */}
       <Typography className={classes.row}>
         <LocationOnIcon className={classes.icon} />
         Location:{" "}
@@ -56,6 +57,8 @@ const Information = ({ data, city, country }) => {
           {data.name}, {data.sys.country}{" "}
         </Box>
       </Typography>
+
+      {/* Temperature */}
       <Typography className={classes.row}>
         <SettingsBrightnessIcon className={classes.icon} />
         Temperature:{" "}
@@ -63,6 +66,8 @@ const Information = ({ data, city, country }) => {
           {data.main.temp}°C{" "}
         </Box>
       </Typography>
+
+      {/* Humidity */}
       <Typography className={classes.row}>
         <OpacityIcon className={classes.icon} />
         Humidity:{" "}
@@ -70,6 +75,8 @@ const Information = ({ data, city, country }) => {
           {data.main.humidity}%{" "}
         </Box>
       </Typography>
+
+      {/* Sun Rise */}
       <Typography className={classes.row}>
         <Brightness5Icon className={classes.icon} />
         Sun Rise:{" "}
@@ -77,6 +84,8 @@ const Information = ({ data, city, country }) => {
           {new Date(data.sys.sunrise * 1000).toLocaleTimeString()}{" "}
         </Box>
       </Typography>
+
+      {/* Sun set */}
       <Typography className={classes.row}>
         <Brightness6Icon className={classes.icon} />
         Sun Set:{" "}
@@ -84,6 +93,8 @@ const Information = ({ data, city, country }) => {
           {new Date(data.sys.sunset * 1000).toLocaleTimeString()}{" "}
         </Box>
       </Typography>
+
+      {/* Condition */}
       <Typography className={classes.row}>
         <DehazeIcon className={classes.icon} />
         Condition:{" "}
@@ -91,6 +102,8 @@ const Information = ({ data, city, country }) => {
           {data.weather[0].main}{" "}
         </Box>
       </Typography>
+
+      {/* Clouds */}
       <Typography className={classes.row}>
         <CloudIcon className={classes.icon} />
         Clouds:{" "}
@@ -98,10 +111,11 @@ const Information = ({ data, city, country }) => {
           {getCloudsData(data.clouds.all)}{" "}
         </Box>
       </Typography>
+
     </Box>
   ) : !(city && country) ? (
     <Typography className={classes.error}>
-      Please Enter the values to check Weather
+      Please enter values to check current weather
     </Typography>
   ) : (
     ""
