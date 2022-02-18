@@ -1,8 +1,24 @@
-//Step 1 : NPM INSTALL  - TO INSTALL ALL REQUIRED PACKAGES,
+Built With
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+React.js
 
-//Step 2 : NPM START   - TO START DEVELOPMENT SERVER, Once connected to localhost server, follow step below
+Material-UI
 
-//Step 3 : Input city name and country name in the fields provided, then click "Get Weather" to display weather information.
+Axios
 
+JavaScript
 
-LINK TO OpenWeatherAPI - https://openweathermap.org/
+Api Used: https://openweathermap.org/
+
+Getting Started
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) NPM install  --this command installs necessary node modules for the application 
+
+2) NPM start  --this command runs a local development server on your default browser
+
+Usage
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) Enter city and country in the form fields on top.
+
+2) Click "Get Weather" button to display weather info.
